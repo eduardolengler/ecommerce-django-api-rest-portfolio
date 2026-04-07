@@ -1,0 +1,90 @@
+{
+  "info": {
+    "_postman_id": "f43ab1e7-6698-4d66-9455-269918440e03",
+    "name": "API E-commerce TCC",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49533947",
+    "_collection_link": "https://go.postman.co/collection/49533947-f43ab1e7-6698-4d66-9455-269918440e03?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "http://127.0.0.1:8000/api/clientes/",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"cliente_postman\",\n    \"email\": \"postman@teste.com\",\n    \"password\": \"senha_do_postman\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/clientes/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "clientes",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/pedidos/",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxMDE4MDQ2LCJpYXQiOjE3NzEwMTQ0NDYsImp0aSI6ImM0MWMzN2ZhNWU1NjQ5MzU4NjMxMDI0Mzk2MzY1YWU1IiwidXNlcl9pZCI6IjMifQ.Gc50_9Ijfv_0jxo6XMqxhSiR7ACz7nvwW9DQUTx1-0s",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"itens\": [\n    {\n      \"produto\": 1,\n      \"quantidade\": 2\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/pedidos/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "pedidos",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
